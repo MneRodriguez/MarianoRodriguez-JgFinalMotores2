@@ -4,5 +4,35 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MenuInicial.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Nivel1.unity
+    guid: 749fe0c2736caf240ae3053305b426f0
+  - enabled: 1
+    path: Assets/Scenes/Nivel2.unity
+    guid: 81698a441bcdef64289aca79e0ddd609
+  - enabled: 1
+    path: Assets/Scenes/Nivel3.unity
+    guid: 669186cba6543034dad6b09682a93d96
+  - enabled: 1
+    path: Assets/Scenes/MenuVictoriaNvl1.unity
+    guid: d01be2bc163d1cd489b1c0b7854ac8e8
+  - enabled: 1
+    path: Assets/Scenes/MenuVictoriaNvl2.unity
+    guid: e59a81d6fc74f384c9e1413ac966f204
+  - enabled: 1
+    path: Assets/Scenes/MenuVictoriaNvl3.unity
+    guid: 5e20982c77c26be46976cdd14a349181
+  - enabled: 1
+    path: Assets/Scenes/MenuDerrtNvl1.unity
+    guid: 7329e7b6fa0306d4fa79bbdb79c0966b
+  - enabled: 1
+    path: Assets/Scenes/MenuDerrtNvl2.unity
+    guid: 132e6a155d59ab84a9fd3e2a41e01660
+  - enabled: 1
+    path: Assets/Scenes/MenuDerrtNvl3.unity
+    guid: 67bf057c4020e5b49b30b31ca0cea170
   m_configObjects: {}
