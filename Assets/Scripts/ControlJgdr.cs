@@ -6,8 +6,8 @@ using UnityEngine;
 public class ControlJgdr : MonoBehaviour
 {
     public float VelMax = 1.4f;
-    public float gravedad = 15f;
-    public float AlturaSalto = 9f;
+    public float gravedad = 6f;
+    public float AlturaSalto = 3f;
     public float direccionMovto = 0;
         
     public Rigidbody rb;

@@ -229,10 +229,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VelMax: 1.4
-  gravedad: 15
-  AlturaSalto: 9
+  gravedad: 2
+  AlturaSalto: 3
   direccionMovto: 0
-  rb: {fileID: 36068948}
+  rb: {fileID: 0}
   mainCollider: {fileID: 36068943}
   TocandoPiso: 0
   Luz1: {fileID: 0}
@@ -247,7 +247,7 @@ Rigidbody:
   m_GameObject: {fileID: 36068942}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 10
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -514,3 +514,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1699737463 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e72b6961332fc6149a4303a32837eaab,
+    type: 3}
+  m_PrefabInstance: {fileID: 1223869006}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1699737464
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699737463}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4068373912626513877, guid: e72b6961332fc6149a4303a32837eaab, type: 3}
