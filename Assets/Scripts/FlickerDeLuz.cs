@@ -29,10 +29,10 @@ public class FlickerDeLuz : MonoBehaviour
         estaFallando = true;
         LuzFallada1.enabled = false;
         randomizer = Random.Range(0.2f, 0.1f);
-        yield return new WaitForSeconds(VelDeFlicker * 2);
+        yield return new WaitForSeconds(VelDeFlicker);
         LuzFallada1.enabled = true;
         randomizer = Random.Range(0.2f, 0.1f);
-        yield return new WaitForSeconds(VelDeFlicker * 2);
+        yield return new WaitForSeconds(VelDeFlicker);
         estaFallando = false;
 
     }

@@ -27,7 +27,9 @@ public class ControlJgdr : MonoBehaviour
 
         rb.collisionDetectionMode = CollisionDetectionMode.Continuous;        
         rb.constraints = RigidbodyConstraints.FreezePositionZ;
-        
+
+        rb.centerOfMass = Vector3.zero;
+        rb.inertiaTensorRotation = Quaternion.identity;
         rb.constraints = RigidbodyConstraints.FreezeRotationX;  // CON ESTOS 3 QUISE PREVENIR NO SE INCLINE NI ROTE
         rb.constraints = RigidbodyConstraints.FreezeRotationY;
         rb.constraints = RigidbodyConstraints.FreezeRotationZ;
@@ -63,7 +65,7 @@ public class ControlJgdr : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
-            rb.velocity = new Vector2(rb.velocity.x, AlturaSalto); // MECANICA DE SALTO
+            rb.velocity = new Vector2(rb.velocity.x, AlturaSalto); // MECANICA DE SALTO, ARREGLAR LO DE QUE SALTA EN EL AIRE
             
             EnElAire = true;
         }
@@ -83,7 +85,7 @@ public class ControlJgdr : MonoBehaviour
     void OnCollisionStay()
     {
         TocandoPiso = true;
-        //EnElAire = false;
+        EnElAire = false;
     }
 
     public void OnTriggerEnter(Collider other)
