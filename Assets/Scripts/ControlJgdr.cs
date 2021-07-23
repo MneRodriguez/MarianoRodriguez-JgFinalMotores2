@@ -14,10 +14,10 @@ public class ControlJgdr : MonoBehaviour
     public BoxCollider mainCollider;
 
     public bool TocandoPiso = false;
-
+    public bool EnElAire = false;
     
 
-    public Light Luz1, Luz1b, Luz2;
+    public Light Luz1, Luz2, Luz3;
     void Start()
     {
         
@@ -37,12 +37,12 @@ public class ControlJgdr : MonoBehaviour
         GameObject LuzPrender2= GameObject.FindWithTag("LuzAencender2");
 
         Luz1 = LuzPrender1.GetComponent<Light>();
-        Luz1b = LuzPrender1b.GetComponent<Light>();
-        Luz2 = LuzPrender2.GetComponent<Light>();
+        Luz2 = LuzPrender1b.GetComponent<Light>();
+        Luz3 = LuzPrender2.GetComponent<Light>();
 
         Luz1.enabled = false;
-        Luz1b.enabled = false;
         Luz2.enabled = false;
+        Luz3.enabled = false;
 
     }
     void Update()
@@ -54,28 +54,36 @@ public class ControlJgdr : MonoBehaviour
 
     public void MoverJgdr()
     {
-        float x = Input.GetAxisRaw("Horizontal");
+        float x = Input.GetAxis("Horizontal");
         float movto = x * VelMax;
-        rb.velocity = new Vector2(movto, rb.velocity.y);  // VER SI DEBO CAMBIARLO A Vector3
+        rb.velocity = new Vector2(movto, rb.velocity.y); 
     }
 
     public void SaltarJgdr()
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
-            rb.velocity = new Vector2(rb.velocity.x, AlturaSalto);
+            rb.velocity = new Vector2(rb.velocity.x, AlturaSalto); // MECANICA DE SALTO
+            
+            EnElAire = true;
+        }
+        else
+        {
+            EnElAire = false;
         }
     }
     void FixedUpdate()
     {
-        rb.AddForce(new Vector3(0, -gravedad * rb.mass, 0));
+        rb.AddForce(new Vector3(0, -gravedad * rb.mass, 0)); 
 
         TocandoPiso = false;
+        
     }
 
     void OnCollisionStay()
     {
         TocandoPiso = true;
+        //EnElAire = false;
     }
 
     public void OnTriggerEnter(Collider other)
@@ -83,11 +91,11 @@ public class ControlJgdr : MonoBehaviour
         if (other.gameObject.CompareTag("SwitchLuz1"))
         {
             Luz1.enabled = true;
-            Luz1b.enabled = true;
+            Luz2.enabled = true;
         }
         else if (other.gameObject.CompareTag("SwitchLuz2"))
         {
-            Luz2.enabled = true;
+            Luz3.enabled = true;
         }
 
         if (other.gameObject.CompareTag("Obstaculo"))
