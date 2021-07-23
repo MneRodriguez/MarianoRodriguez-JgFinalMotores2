@@ -6,6 +6,8 @@ TagManager:
   tags:
   - LuzFallada1
   - ZonaWinNvl1
+  - ZonaAbrirPrta1
+  - Prta1Nvl1
   layers:
   - Default
   - TransparentFX

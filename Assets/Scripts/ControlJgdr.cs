@@ -34,6 +34,8 @@ public class ControlJgdr : MonoBehaviour
         rb.constraints = RigidbodyConstraints.FreezeRotationY;
         rb.constraints = RigidbodyConstraints.FreezeRotationZ;
 
+        GameObject Nvl1Prta1 = GameObject.FindWithTag("Prta1Nvl1");
+        
         GameObject LuzPrender1 = GameObject.FindWithTag("LuzAencender1");
         GameObject LuzPrender1b = GameObject.FindWithTag("LuzAencender1b");
         GameObject LuzPrender2= GameObject.FindWithTag("LuzAencender2");
