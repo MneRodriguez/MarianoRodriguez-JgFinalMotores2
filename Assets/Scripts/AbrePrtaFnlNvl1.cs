@@ -9,7 +9,7 @@ public class AbrePrtaFnlNvl1 : MonoBehaviour
     {
         //AnimPrtaFnlNvl1 = GetComponent<Animator>();
 
-        AnimPrtaFnlNvl1.enabled = true;
+        AnimPrtaFnlNvl1.enabled = false;
         AnimPrtaFnlNvl1.SetBool("SeAbrePrtaFinalNvl1", false);
         
     }
@@ -24,7 +24,8 @@ public class AbrePrtaFnlNvl1 : MonoBehaviour
     {
         if (other.gameObject.CompareTag("CuboLlavePrtaFnlNvl1")) // SI A LA ZONA QUE TRIGGEREA LA ANIM LA TOCA EL "CuboLlave"
         {
-            AnimPrtaFnlNvl1.SetBool("SeAbrePrtaFinalNvl1", true);
+            AnimPrtaFnlNvl1.enabled = true; // LA PUERTA SE ABRE AL REPRODUCIRSE SU ANIMACION
+            
         }
     }
 }
