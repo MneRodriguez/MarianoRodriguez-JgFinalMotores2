@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody))]
 public class ControlJgdr : MonoBehaviour
@@ -94,7 +95,7 @@ public class ControlJgdr : MonoBehaviour
 
         if (other.gameObject.CompareTag("ZonaWinNvl1"))
         {
-            Time.timeScale = 0.0f;
+            SceneManager.LoadScene("MenuVictoriaNvl1");
         }
 
 

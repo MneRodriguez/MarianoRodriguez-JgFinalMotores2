@@ -10,7 +10,7 @@ public class AbrePrtaFnlNvl1 : MonoBehaviour
         //AnimPrtaFnlNvl1 = GetComponent<Animator>();
 
         AnimPrtaFnlNvl1.enabled = false;
-        AnimPrtaFnlNvl1.SetBool("SeAbrePrtaFinalNvl1", false);
+        //AnimPrtaFnlNvl1.SetBool("SeAbrePrtaFinalNvl1", false);
         
     }
 
