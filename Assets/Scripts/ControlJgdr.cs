@@ -42,11 +42,11 @@ public class ControlJgdr : MonoBehaviour
 
         Luz1 = LuzPrender1.GetComponent<Light>();
         Luz2 = LuzPrender1b.GetComponent<Light>();
-        Luz3 = LuzPrender2.GetComponent<Light>();*/
+        Luz3 = LuzPrender2.GetComponent<Light>();
 
         Luz1.enabled = false;
         Luz2.enabled = false;
-        Luz3.enabled = false;
+        Luz3.enabled = false;*/
 
     }
     void Update()
