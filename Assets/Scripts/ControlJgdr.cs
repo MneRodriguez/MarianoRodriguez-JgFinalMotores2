@@ -7,7 +7,7 @@ public class ControlJgdr : MonoBehaviour
 {
     public float VelMax = 1.4f;
     public float gravedad = 6f;
-    public float AlturaSalto = 3f;
+    public float AlturaSalto = 1.9f;
     public float direccionMovto = 0;
         
     public Rigidbody rb;
@@ -34,15 +34,15 @@ public class ControlJgdr : MonoBehaviour
         rb.constraints = RigidbodyConstraints.FreezeRotationY;
         rb.constraints = RigidbodyConstraints.FreezeRotationZ;
 
-        GameObject Nvl1Prta1 = GameObject.FindWithTag("Prta1Nvl1");
+      
         
-        GameObject LuzPrender1 = GameObject.FindWithTag("LuzAencender1");
+        /*GameObject LuzPrender1 = GameObject.FindWithTag("LuzAencender1");
         GameObject LuzPrender1b = GameObject.FindWithTag("LuzAencender1b");
         GameObject LuzPrender2= GameObject.FindWithTag("LuzAencender2");
 
         Luz1 = LuzPrender1.GetComponent<Light>();
         Luz2 = LuzPrender1b.GetComponent<Light>();
-        Luz3 = LuzPrender2.GetComponent<Light>();
+        Luz3 = LuzPrender2.GetComponent<Light>();*/
 
         Luz1.enabled = false;
         Luz2.enabled = false;
@@ -68,12 +68,8 @@ public class ControlJgdr : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W))
         {
             rb.velocity = new Vector2(rb.velocity.x, AlturaSalto); // MECANICA DE SALTO, ARREGLAR LO DE QUE SALTA EN EL AIRE
-            
+
             EnElAire = true;
-        }
-        else
-        {
-            EnElAire = false;
         }
     }
     void FixedUpdate()
@@ -81,7 +77,8 @@ public class ControlJgdr : MonoBehaviour
         rb.AddForce(new Vector3(0, -gravedad * rb.mass, 0)); 
 
         TocandoPiso = false;
-        
+        EnElAire = true;
+
     }
 
     void OnCollisionStay()
@@ -92,22 +89,10 @@ public class ControlJgdr : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("SwitchLuz1"))
-        {
-            Luz1.enabled = true;
-            Luz2.enabled = true;
-        }
-        else if (other.gameObject.CompareTag("SwitchLuz2"))
-        {
-            Luz3.enabled = true;
-        }
+        
+            
 
-        if (other.gameObject.CompareTag("Obstaculo"))
-        {
-            Time.timeScale = 0.0f;
-        }
-
-        if (other.gameObject.CompareTag("ZonaGanar"))
+        if (other.gameObject.CompareTag("ZonaWinNvl1"))
         {
             Time.timeScale = 0.0f;
         }
