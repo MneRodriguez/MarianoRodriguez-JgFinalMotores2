@@ -27,13 +27,13 @@ public class ControlJgdr : MonoBehaviour
         mainCollider = GetComponent<BoxCollider>();
 
         rb.collisionDetectionMode = CollisionDetectionMode.Continuous;        
-        rb.constraints = RigidbodyConstraints.FreezePositionZ;
+        //rb.constraints = RigidbodyConstraints.FreezePositionZ;
 
         rb.centerOfMass = Vector3.zero;
         rb.inertiaTensorRotation = Quaternion.identity;
-        rb.constraints = RigidbodyConstraints.FreezeRotationX;  // CON ESTOS 3 QUISE PREVENIR NO SE INCLINE NI ROTE
-        rb.constraints = RigidbodyConstraints.FreezeRotationY;
-        rb.constraints = RigidbodyConstraints.FreezeRotationZ;
+        //rb.constraints = RigidbodyConstraints.FreezeRotationX;  // CON ESTOS 3 QUISE PREVENIR NO SE INCLINE NI ROTE
+        //rb.constraints = RigidbodyConstraints.FreezeRotationY;
+        //rb.constraints = RigidbodyConstraints.FreezeRotationZ;
 
 
 
