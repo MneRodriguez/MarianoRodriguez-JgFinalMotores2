@@ -11,6 +11,10 @@ TagManager:
   - CuboLlavePrtaFnlNvl1
   - ZonaWinNvl2
   - ObstaculoNvl2
+  - ZonaSwitchLucesNvl2
+  - LuzAencender1
+  - LuzAencender2
+  - LuzAencender3
   layers:
   - Default
   - TransparentFX

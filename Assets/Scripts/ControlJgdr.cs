@@ -18,7 +18,7 @@ public class ControlJgdr : MonoBehaviour
     public bool EnElAire = false;
     
 
-    public Light Luz1, Luz2, Luz3;
+    public Light LuzNvl2_1, LuzNvl2_2, LuzNvl2_3;
     void Start()
     {
         
@@ -35,19 +35,19 @@ public class ControlJgdr : MonoBehaviour
         rb.constraints = RigidbodyConstraints.FreezeRotationY;
         rb.constraints = RigidbodyConstraints.FreezeRotationZ;
 
-      
-        
-        /*GameObject LuzPrender1 = GameObject.FindWithTag("LuzAencender1");
-        GameObject LuzPrender1b = GameObject.FindWithTag("LuzAencender1b");
-        GameObject LuzPrender2= GameObject.FindWithTag("LuzAencender2");
 
-        Luz1 = LuzPrender1.GetComponent<Light>();
-        Luz2 = LuzPrender1b.GetComponent<Light>();
-        Luz3 = LuzPrender2.GetComponent<Light>();
 
-        Luz1.enabled = false;
-        Luz2.enabled = false;
-        Luz3.enabled = false;*/
+        GameObject LuzPrender1 = GameObject.FindWithTag("LuzAencender1");
+        GameObject LuzPrender2 = GameObject.FindWithTag("LuzAencender2");
+        GameObject LuzPrender3= GameObject.FindWithTag("LuzAencender3");
+
+        LuzNvl2_1 = LuzPrender1.GetComponent<Light>();
+        LuzNvl2_2 = LuzPrender2.GetComponent<Light>();
+        LuzNvl2_1 = LuzPrender3.GetComponent<Light>();
+
+        LuzNvl2_1.enabled = false;
+        LuzNvl2_2.enabled = false;
+        LuzNvl2_3.enabled = false;
 
     }
     void Update()
@@ -90,6 +90,13 @@ public class ControlJgdr : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.CompareTag("ZonaSwitchLucesNvl2"))
+        {
+            LuzNvl2_1.enabled = true;
+            LuzNvl2_2.enabled = true;
+            LuzNvl2_3.enabled = true;
+        }
+
         if (other.gameObject.CompareTag("ObstaculoNvl2"))
         {
             SceneManager.LoadScene("MenuDerrtNvl2");
