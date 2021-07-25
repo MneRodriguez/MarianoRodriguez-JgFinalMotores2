@@ -18,6 +18,8 @@ TagManager:
   - LuzRojoVerdePrta
   - ZonaAbrePrtaCambiaLuz
   - CuboLlavePrtaNvl2
+  - PuertaJaulaCuboLlave
+  - PrtaNvl2
   layers:
   - Default
   - TransparentFX
