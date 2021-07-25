@@ -31,11 +31,9 @@ public class ControlJgdr : MonoBehaviour
 
         rb.centerOfMass = Vector3.zero;
         rb.inertiaTensorRotation = Quaternion.identity;
-        //rb.constraints = RigidbodyConstraints.FreezeRotationX;  // CON ESTOS 3 QUISE PREVENIR NO SE INCLINE NI ROTE
+        //rb.constraints = RigidbodyConstraints.FreezeRotationX;  // AL FINAL ESTOS 3 COMANDOS IMPEDIAN QUE LAS CASILLAS QUEDARAN TILDADAS
         //rb.constraints = RigidbodyConstraints.FreezeRotationY;
         //rb.constraints = RigidbodyConstraints.FreezeRotationZ;
-
-
 
         GameObject LuzPrender1 = GameObject.FindWithTag("LuzAencender1");
         GameObject LuzPrender2 = GameObject.FindWithTag("LuzAencender2");
