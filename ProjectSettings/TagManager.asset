@@ -15,6 +15,9 @@ TagManager:
   - LuzAencender1
   - LuzAencender2
   - LuzAencender3
+  - LuzRojoVerdePrta
+  - ZonaAbrePrtaCambiaLuz
+  - CuboLlavePrtaNvl2
   layers:
   - Default
   - TransparentFX

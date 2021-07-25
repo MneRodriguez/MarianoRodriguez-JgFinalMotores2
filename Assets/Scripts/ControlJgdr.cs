@@ -16,7 +16,7 @@ public class ControlJgdr : MonoBehaviour
 
     public bool TocandoPiso = false;
     public bool EnElAire = false;
-    
+
 
     public Light LuzNvl2_1, LuzNvl2_2, LuzNvl2_3;
     void Start()
@@ -43,8 +43,8 @@ public class ControlJgdr : MonoBehaviour
 
         LuzNvl2_1 = LuzPrender1.GetComponent<Light>();
         LuzNvl2_2 = LuzPrender2.GetComponent<Light>();
-        LuzNvl2_1 = LuzPrender3.GetComponent<Light>();
-
+        LuzNvl2_3 = LuzPrender3.GetComponent<Light>();
+        
         LuzNvl2_1.enabled = false;
         LuzNvl2_2.enabled = false;
         LuzNvl2_3.enabled = false;

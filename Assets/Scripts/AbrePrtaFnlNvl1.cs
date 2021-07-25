@@ -5,6 +5,7 @@ using UnityEngine;
 public class AbrePrtaFnlNvl1 : MonoBehaviour
 {
     public Animator AnimPrtaFnlNvl1;
+    
     void Start()
     {
         //AnimPrtaFnlNvl1 = GetComponent<Animator>();
