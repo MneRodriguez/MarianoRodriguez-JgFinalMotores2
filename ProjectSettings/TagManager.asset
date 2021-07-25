@@ -9,6 +9,8 @@ TagManager:
   - ZonaAbrirPrtaFinalNvl1
   - PrtaFinalNvl1
   - CuboLlavePrtaFnlNvl1
+  - ZonaWinNvl2
+  - ObstaculoNvl2
   layers:
   - Default
   - TransparentFX

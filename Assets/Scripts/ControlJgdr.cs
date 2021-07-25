@@ -90,12 +90,19 @@ public class ControlJgdr : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        
-            
+        if (other.gameObject.CompareTag("ObstaculoNvl2"))
+        {
+            SceneManager.LoadScene("MenuDerrtNvl2");
+        }
 
         if (other.gameObject.CompareTag("ZonaWinNvl1"))
         {
             SceneManager.LoadScene("MenuVictoriaNvl1");
+        }
+
+        if (other.gameObject.CompareTag("ZonaWinNvl2"))
+        {
+            SceneManager.LoadScene("MenuVictoriaNvl2");
         }
 
 
