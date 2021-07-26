@@ -9,6 +9,8 @@ public class DisparoDelJgdr : MonoBehaviour
 
     public float VelDesplzBalaJgdr = 20f;
     public float duracionBala = 2.5f;
+
+    public bool habilitarDisparo = false;
     void Start()
     {
         
@@ -17,7 +19,7 @@ public class DisparoDelJgdr : MonoBehaviour
     
     void Update()
     {
-        //if (TomarArma) // SI EL PLAYER RECOGE EL ARMA
+        if (habilitarDisparo) // SI EL PLAYER RECOGE EL ARMA
         {
             if (Input.GetButtonDown("Fire1"))
             {
@@ -28,7 +30,7 @@ public class DisparoDelJgdr : MonoBehaviour
         
     }
 
-    void Disparar()
+    public void Disparar()
     {
         GameObject balaJgdr = Instantiate(balaPrefab, ZonaSpawnDelDisparoJgdr.position, ZonaSpawnDelDisparoJgdr.rotation);
         Rigidbody rbala = balaJgdr.GetComponent<Rigidbody>();

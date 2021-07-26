@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Rigidbody))]
 public class ControlJgdr : MonoBehaviour
 {
+    private DisparoDelJgdr tomarScriptDisparoDelJgdr;
+    
     public float VelMax = 1.4f;
     public float gravedad = 6f;
     public float AlturaSalto = 1.9f;
@@ -21,7 +23,7 @@ public class ControlJgdr : MonoBehaviour
     public Light LuzNvl2_1, LuzNvl2_2, LuzNvl2_3;
     void Start()
     {
-        
+        tomarScriptDisparoDelJgdr = GetComponent<DisparoDelJgdr>();
         
         rb = GetComponent<Rigidbody>();
         mainCollider = GetComponent<BoxCollider>();
@@ -88,6 +90,11 @@ public class ControlJgdr : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.CompareTag("Pistola"))
+        {
+            tomarScriptDisparoDelJgdr.habilitarDisparo = true;
+        }
+        
         if (other.gameObject.CompareTag("ZonaSwitchLucesNvl2"))
         {
             LuzNvl2_1.enabled = true;
