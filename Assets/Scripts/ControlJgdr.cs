@@ -6,8 +6,11 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Rigidbody))]
 public class ControlJgdr : MonoBehaviour
 {
-    private DisparoDelJgdr tomarScriptDisparoDelJgdr;
-    
+    private DisparoDelJgdr tomarScriptDisparoDelJgdr; // TOMO LOS SCRIPTS Y SUS FUNCIONES RELACIONADAS A LA PISTOLA
+    private TomarArma tomarScriptDeAgarrarArma;
+
+    public Camera cam;
+
     public float VelMax = 1.4f;
     public float gravedad = 6f;
     public float AlturaSalto = 1.9f;
@@ -24,6 +27,7 @@ public class ControlJgdr : MonoBehaviour
     void Start()
     {
         tomarScriptDisparoDelJgdr = GetComponent<DisparoDelJgdr>();
+        tomarScriptDeAgarrarArma = GetComponent<TomarArma>();
         
         rb = GetComponent<Rigidbody>();
         mainCollider = GetComponent<BoxCollider>();
@@ -61,7 +65,7 @@ public class ControlJgdr : MonoBehaviour
     {
         float x = Input.GetAxis("Horizontal");
         float movto = x * VelMax;
-        rb.velocity = new Vector2(movto, rb.velocity.y); 
+        rb.velocity = new Vector2(movto, rb.velocity.y);  // CAMBIAR POR LO QUE DIJO EL PROFE
     }
 
     public void SaltarJgdr()
@@ -92,9 +96,17 @@ public class ControlJgdr : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Pistola"))
         {
+            tomarScriptDeAgarrarArma.puedeAgarrarArma = true;
             tomarScriptDisparoDelJgdr.habilitarDisparo = true;
+
+            // HABILITA MOVTO EN 8 DIRECCS CON EL MOUSE AL AGARRAR LA PISTOLA
+            var posDeCam = Camera.main.WorldToScreenPoint(transform.position);
+            var direccion = Input.mousePosition + posDeCam;
+            var angulo = Mathf.Atan2(direccion.y, direccion.x) * Mathf.Rad2Deg;
+            tomarScriptDeAgarrarArma.ArmaQueSeRecoge.transform.rotation = Quaternion.AngleAxis(angulo, Vector3.up); // ESTO APLICARSELO AL ARMA SOLAMENTE
+            transform.rotation = Quaternion.AngleAxis(angulo, Vector3.zero); // ESTO AFECTA AL PLAYER, CUANDO DEBERIA HACERLO AL ARMA
         }
-        
+
         if (other.gameObject.CompareTag("ZonaSwitchLucesNvl2"))
         {
             LuzNvl2_1.enabled = true;

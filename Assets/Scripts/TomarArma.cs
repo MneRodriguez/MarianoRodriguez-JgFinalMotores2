@@ -5,9 +5,9 @@ using UnityEngine;
 public class TomarArma : MonoBehaviour
 {
     public GameObject ZonaAgarreDeArmaEnPlayer;
-    bool puedeAgarrarArma;
+    public bool puedeAgarrarArma;
 
-    GameObject ArmaQueSeRecoge;
+    public GameObject ArmaQueSeRecoge;
     //bool tieneElArma;
 
     void Start()
@@ -27,11 +27,11 @@ public class TomarArma : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other) // ESTE METODO TAMBIEN LO HICE EN EL OTRO SCRIPT "ControlJgdr" PQ QUERIA INTENTAR DE NUEVO ESO DE LLAMAR A UNA FUNCION DE UN SCRIPT DESDE OTRO SCRIPT
     {
-        if (other.gameObject.CompareTag("Pistola")) // SI EL PLAYER TOCA LA PISTOLA...
+        //if (other.gameObject.CompareTag("Pistola")) // SI EL PLAYER TOCA LA PISTOLA...
         {
-            puedeAgarrarArma = true;
+            //puedeAgarrarArma = true;
             ArmaQueSeRecoge = other.gameObject;
         }
     }

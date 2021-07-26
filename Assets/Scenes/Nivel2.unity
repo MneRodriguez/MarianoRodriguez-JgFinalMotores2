@@ -4476,6 +4476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c280f1107ebcb064abbe023a3ac3e5a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 0}
   VelMax: 1.4
   gravedad: 1
   AlturaSalto: 1.9
@@ -4516,6 +4517,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ZonaAgarreDeArmaEnPlayer: {fileID: 804046197}
+  puedeAgarrarArma: 0
+  ArmaQueSeRecoge: {fileID: 1537871726}
 --- !u!114 &1905435231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4533,6 +4536,7 @@ MonoBehaviour:
     type: 3}
   VelDesplzBalaJgdr: 20
   duracionBala: 2.5
+  habilitarDisparo: 0
 --- !u!1 &1978706508
 GameObject:
   m_ObjectHideFlags: 0
