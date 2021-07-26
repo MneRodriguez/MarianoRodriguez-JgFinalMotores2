@@ -22,6 +22,7 @@ TagManager:
   - PrtaNvl2
   - ZonaAbrirPrtaJaulaCuboLlave
   - Pistola
+  - BalaJgdr
   layers:
   - Default
   - TransparentFX

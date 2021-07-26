@@ -11,7 +11,7 @@ public class ControlJgdr : MonoBehaviour
 
     public Camera cam;
     Transform lugarDeDisparo;
-    Vector2 direccionDeMira;
+    Vector3 direccionDeMira;
     float anguloDeMira;
 
     public float VelMax = 1.4f;
@@ -103,14 +103,35 @@ public class ControlJgdr : MonoBehaviour
             tomarScriptDisparoDelJgdr.habilitarDisparo = true;
 
             // HABILITA MOVTO EN 8 DIRECCS CON EL MOUSE AL AGARRAR LA PISTOLA
-            direccionDeMira = Camera.main.WorldToScreenPoint(Input.mousePosition);
+            direccionDeMira = Camera.main.ScreenToWorldPoint(Input.mousePosition) - tomarScriptDeAgarrarArma.ArmaQueSeRecoge.transform.position; // ESTE ES EL POSITION DEL PLAYER CREO
+            direccionDeMira.Normalize();
+
+
             anguloDeMira = Mathf.Atan2(direccionDeMira.y, direccionDeMira.x) * Mathf.Rad2Deg;
             //lugarDeDisparo.rotation = Quaternion.Euler(0, 0, anguloDeMira);
-            
+
             //var posDeCam = Camera.main.WorldToScreenPoint(transform.position);
             //var direccion = Input.mousePosition + posDeCam;
-            //var angulo = Mathf.Atan2(direccion.y, direccion.x) * Mathf.Rad2Deg;
-            tomarScriptDeAgarrarArma.ArmaQueSeRecoge.transform.rotation = Quaternion.Euler(0,0,anguloDeMira); // ESTO APLICARSELO AL ARMA SOLAMENTE
+
+            tomarScriptDeAgarrarArma.ArmaQueSeRecoge.transform.rotation = Quaternion.Euler(0f, anguloDeMira, 0f ); // ESTO ROTA EL ARMA PERO NO AL COMPAS DEL MOUSE
+            
+            if (anguloDeMira < -90 || anguloDeMira > 90)
+            {
+                if (tomarScriptDeAgarrarArma.ArmaQueSeRecoge.transform.eulerAngles.y == 0)
+                {
+                    tomarScriptDeAgarrarArma.ArmaQueSeRecoge.transform.localRotation = Quaternion.Euler(100, 0, -anguloDeMira);
+                }
+                else if (tomarScriptDeAgarrarArma.ArmaQueSeRecoge.transform.eulerAngles.y == 100)
+                {
+                    tomarScriptDeAgarrarArma.ArmaQueSeRecoge.transform.localRotation = Quaternion.Euler(100, 100, -anguloDeMira);
+                }
+            }
+            
+            
+            
+            
+            //tomarScriptDeAgarrarArma.ArmaQueSeRecoge.transform.rotation = Quaternion.AngleAxis(anguloDeMira, Vector3.zero);
+
             //transform.rotation = Quaternion.AngleAxis(angulo, Vector3.zero); // ESTO AFECTA AL PLAYER, CUANDO DEBERIA HACERLO AL ARMA
         }
 

@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 13642261}
   - component: {fileID: 13642260}
   - component: {fileID: 13642259}
+  - component: {fileID: 13642262}
   m_Layer: 0
   m_Name: Muro1 (1)
   m_TagString: Untagged
@@ -162,7 +163,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 13642257}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -214,6 +215,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 13642257}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &13642262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13642257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6695e644a543064aa90b2bca82e875e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &54796760
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,6 +239,7 @@ GameObject:
   - component: {fileID: 54796764}
   - component: {fileID: 54796763}
   - component: {fileID: 54796762}
+  - component: {fileID: 54796765}
   m_Layer: 0
   m_Name: Muro1
   m_TagString: Untagged
@@ -255,7 +269,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 54796760}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -307,6 +321,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 54796760}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &54796765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54796760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6695e644a543064aa90b2bca82e875e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &164322223
 GameObject:
   m_ObjectHideFlags: 0
@@ -2075,6 +2101,7 @@ GameObject:
   - component: {fileID: 833186811}
   - component: {fileID: 833186810}
   - component: {fileID: 833186809}
+  - component: {fileID: 833186812}
   m_Layer: 0
   m_Name: Muro1 (2)
   m_TagString: Untagged
@@ -2104,7 +2131,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 833186807}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -2156,6 +2183,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 833186807}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &833186812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833186807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6695e644a543064aa90b2bca82e875e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &885211959
 GameObject:
   m_ObjectHideFlags: 0
