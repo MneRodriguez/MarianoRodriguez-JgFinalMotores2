@@ -10,6 +10,9 @@ public class ControlJgdr : MonoBehaviour
     private TomarArma tomarScriptDeAgarrarArma;
 
     public Camera cam;
+    Transform lugarDeDisparo;
+    Vector2 direccionDeMira;
+    float anguloDeMira;
 
     public float VelMax = 1.4f;
     public float gravedad = 6f;
@@ -100,11 +103,15 @@ public class ControlJgdr : MonoBehaviour
             tomarScriptDisparoDelJgdr.habilitarDisparo = true;
 
             // HABILITA MOVTO EN 8 DIRECCS CON EL MOUSE AL AGARRAR LA PISTOLA
-            var posDeCam = Camera.main.WorldToScreenPoint(transform.position);
-            var direccion = Input.mousePosition + posDeCam;
-            var angulo = Mathf.Atan2(direccion.y, direccion.x) * Mathf.Rad2Deg;
-            tomarScriptDeAgarrarArma.ArmaQueSeRecoge.transform.rotation = Quaternion.AngleAxis(angulo, Vector3.up); // ESTO APLICARSELO AL ARMA SOLAMENTE
-            transform.rotation = Quaternion.AngleAxis(angulo, Vector3.zero); // ESTO AFECTA AL PLAYER, CUANDO DEBERIA HACERLO AL ARMA
+            direccionDeMira = Camera.main.WorldToScreenPoint(Input.mousePosition);
+            anguloDeMira = Mathf.Atan2(direccionDeMira.y, direccionDeMira.x) * Mathf.Rad2Deg;
+            //lugarDeDisparo.rotation = Quaternion.Euler(0, 0, anguloDeMira);
+            
+            //var posDeCam = Camera.main.WorldToScreenPoint(transform.position);
+            //var direccion = Input.mousePosition + posDeCam;
+            //var angulo = Mathf.Atan2(direccion.y, direccion.x) * Mathf.Rad2Deg;
+            tomarScriptDeAgarrarArma.ArmaQueSeRecoge.transform.rotation = Quaternion.Euler(0,0,anguloDeMira); // ESTO APLICARSELO AL ARMA SOLAMENTE
+            //transform.rotation = Quaternion.AngleAxis(angulo, Vector3.zero); // ESTO AFECTA AL PLAYER, CUANDO DEBERIA HACERLO AL ARMA
         }
 
         if (other.gameObject.CompareTag("ZonaSwitchLucesNvl2"))
