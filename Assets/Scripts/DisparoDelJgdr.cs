@@ -17,17 +17,22 @@ public class DisparoDelJgdr : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        //if (TomarArma) // SI EL PLAYER RECOGE EL ARMA
         {
-            Disparar();
+            if (Input.GetButtonDown("Fire1"))
+            {
+                Disparar();
+            }
         }
+        
+        
     }
 
     void Disparar()
     {
         GameObject balaJgdr = Instantiate(balaPrefab, ZonaSpawnDelDisparoJgdr.position, ZonaSpawnDelDisparoJgdr.rotation);
         Rigidbody rbala = balaJgdr.GetComponent<Rigidbody>();
-        rbala.AddForce(ZonaSpawnDelDisparoJgdr.transform.forward * VelDesplzBalaJgdr, ForceMode.Impulse);
+        rbala.AddForce(ZonaSpawnDelDisparoJgdr.transform.right * VelDesplzBalaJgdr, ForceMode.Impulse);
 
         Destroy(balaJgdr, duracionBala);
     }

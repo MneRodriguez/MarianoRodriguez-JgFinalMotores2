@@ -4381,6 +4381,7 @@ GameObject:
   - component: {fileID: 1905435229}
   - component: {fileID: 1905435228}
   - component: {fileID: 1905435230}
+  - component: {fileID: 1905435231}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4515,6 +4516,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ZonaAgarreDeArmaEnPlayer: {fileID: 804046197}
+--- !u!114 &1905435231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905435223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40a3e6477d9d3ae4686d415821e355e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ZonaSpawnDelDisparoJgdr: {fileID: 1540270756}
+  balaPrefab: {fileID: 4962959500020481025, guid: 2b10c18a160bc7f458a9188c990b6376,
+    type: 3}
+  VelDesplzBalaJgdr: 20
+  duracionBala: 2.5
 --- !u!1 &1978706508
 GameObject:
   m_ObjectHideFlags: 0
