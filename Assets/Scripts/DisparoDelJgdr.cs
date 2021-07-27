@@ -7,8 +7,8 @@ public class DisparoDelJgdr : MonoBehaviour
     public Transform ZonaSpawnDelDisparoJgdr;
     public GameObject balaPrefab;
 
-    public float VelDesplzBalaJgdr = 20f;
-    public float duracionBala = 2.5f;
+    public float VelDesplzBalaJgdr = 10f;
+    public float duracionBala = 0.9f;
 
     public bool habilitarDisparo = false;
     void Start()
@@ -37,5 +37,13 @@ public class DisparoDelJgdr : MonoBehaviour
         rbala.AddForce(ZonaSpawnDelDisparoJgdr.transform.right * VelDesplzBalaJgdr, ForceMode.Impulse);
 
         Destroy(balaJgdr, duracionBala);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("MuroDestrct"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

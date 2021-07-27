@@ -23,6 +23,8 @@ TagManager:
   - ZonaAbrirPrtaJaulaCuboLlave
   - Pistola
   - BalaJgdr
+  - MuroDestrct
+  - ConsejoPrenderLuz
   layers:
   - Default
   - TransparentFX

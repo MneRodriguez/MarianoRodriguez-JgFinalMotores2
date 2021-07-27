@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class MurosColsnBalaJgdr : MonoBehaviour
 {
-    
+    public GameObject Muro;
+    public Rigidbody rbMuro;
     void Start()
     {
-        
+        rbMuro = GetComponent<Rigidbody>();
     }
 
     
@@ -16,11 +17,20 @@ public class MurosColsnBalaJgdr : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other) // SI AL MURO LO TOCA LA BALA JUGADOR DEL PLAYER
     {
-        if (other.gameObject.CompareTag("BalaJgdr"))  // SI AL MURO LO TOCA LA BALA JUGADOR DEL PLAYER
+        if (other.gameObject.CompareTag("BalaJgdr"))
         {
-            Destroy(other.gameObject);        
-        } 
+            Destroy(gameObject);
+        }
     }
+
+    /*private void OnCollisionEnter(Collision collision) 
+    {
+        if (collision.gameObject.CompareTag("BalaJgdr"))
+        {
+            Destroy(gameObject);
+        }
+    }*/
+    
 }

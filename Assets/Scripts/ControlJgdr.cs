@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody))]
 public class ControlJgdr : MonoBehaviour
 {
+    Vector3 MovtoHorizontal;
+    
     private DisparoDelJgdr tomarScriptDisparoDelJgdr; // TOMO LOS SCRIPTS Y SUS FUNCIONES RELACIONADAS A LA PISTOLA
     private TomarArma tomarScriptDeAgarrarArma;
 
     public Camera cam;
-    Transform lugarDeDisparo;
+    /*Transform lugarDeDisparo; // DESACTIVE ESTOS CORRESP A LA MECANICA DE APUNTAR CON MOUSE EN 8 DIRECCS
     Vector3 direccionDeMira;
-    float anguloDeMira;
+    float anguloDeMira;*/
 
     public float VelMax = 1.4f;
     public float gravedad = 6f;
@@ -27,6 +30,8 @@ public class ControlJgdr : MonoBehaviour
 
 
     public Light LuzNvl2_1, LuzNvl2_2, LuzNvl2_3;
+    public TextMesh textoConsejoPrenderLuz;
+    public Animator AnimPistolaRotando; // CON ESTA ANIM HAGO LO OPUESTO QUE CON LAS PUERTAS; ACA, SI HAY UN TRIGGER, LA DETENGO
     void Start()
     {
         tomarScriptDisparoDelJgdr = GetComponent<DisparoDelJgdr>();
@@ -34,6 +39,10 @@ public class ControlJgdr : MonoBehaviour
         
         rb = GetComponent<Rigidbody>();
         mainCollider = GetComponent<BoxCollider>();
+        textoConsejoPrenderLuz = GameObject.FindWithTag("ConsejoPrenderLuz").GetComponent<TextMesh>();
+
+        AnimPistolaRotando.enabled = true;
+
 
         rb.collisionDetectionMode = CollisionDetectionMode.Continuous;        
         //rb.constraints = RigidbodyConstraints.FreezePositionZ;
@@ -68,7 +77,7 @@ public class ControlJgdr : MonoBehaviour
     {
         float x = Input.GetAxis("Horizontal");
         float movto = x * VelMax;
-        rb.velocity = new Vector2(movto, rb.velocity.y);  // CAMBIAR POR LO QUE DIJO EL PROFE
+        rb.AddForce(new Vector2(movto, 0), ForceMode.Impulse);  // CAMBIAR POR LO QUE DIJO EL PROFE
     }
 
     public void SaltarJgdr()
@@ -102,8 +111,12 @@ public class ControlJgdr : MonoBehaviour
             tomarScriptDeAgarrarArma.puedeAgarrarArma = true;
             tomarScriptDisparoDelJgdr.habilitarDisparo = true;
 
-            // HABILITA MOVTO EN 8 DIRECCS CON EL MOUSE AL AGARRAR LA PISTOLA
-            direccionDeMira = Camera.main.ScreenToWorldPoint(Input.mousePosition) - tomarScriptDeAgarrarArma.ArmaQueSeRecoge.transform.position; // ESTE ES EL POSITION DEL PLAYER CREO
+            // DETENGO LA ANIM DE PISTOLA GIRANDO SOBRE SU EJE  >>OJO, LA PISTOLA SE DETIENE EN LA POS DE ROTACION DONDE ESTÉ CUANDO LA AGARRE, PONERLA EN 180 MIENTRAS JUEGO LUEGO DE AGARRARLA<<
+            AnimPistolaRotando.enabled = false;
+
+            // HABILITA MOVTO EN 8 DIRECCS CON EL MOUSE AL AGARRAR LA PISTOLA    >>TODAVIA NO FUNCA COMO QUISIERA<<
+
+            /*direccionDeMira = Camera.main.ScreenToWorldPoint(Input.mousePosition) - tomarScriptDeAgarrarArma.ArmaQueSeRecoge.transform.position; // ESTE ES EL POSITION DEL PLAYER CREO
             direccionDeMira.Normalize();
 
 
@@ -125,7 +138,7 @@ public class ControlJgdr : MonoBehaviour
                 {
                     tomarScriptDeAgarrarArma.ArmaQueSeRecoge.transform.localRotation = Quaternion.Euler(100, 100, -anguloDeMira);
                 }
-            }
+            }*/
             
             
             
@@ -140,6 +153,8 @@ public class ControlJgdr : MonoBehaviour
             LuzNvl2_1.enabled = true;
             LuzNvl2_2.enabled = true;
             LuzNvl2_3.enabled = true;
+
+            textoConsejoPrenderLuz.text = "¡Y se hizo la luz!";
         }
 
         if (other.gameObject.CompareTag("ObstaculoNvl2"))
