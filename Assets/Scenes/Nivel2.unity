@@ -4733,7 +4733,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1978706510}
   VelMax: 1.4
-  gravedad: 1
+  gravedad: 4
   AlturaSalto: 2.9
   direccionMovto: 0
   rb: {fileID: 1905435229}
