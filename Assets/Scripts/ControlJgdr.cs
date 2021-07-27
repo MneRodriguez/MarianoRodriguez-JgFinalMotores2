@@ -77,15 +77,20 @@ public class ControlJgdr : MonoBehaviour
     {
         float x = Input.GetAxis("Horizontal");
         float movto = x * VelMax;
-        rb.AddForce(new Vector2(movto, 0), ForceMode.Impulse);  // CAMBIAR POR LO QUE DIJO EL PROFE
+
+        rb.AddRelativeForce(new Vector2(movto, 0), ForceMode.Impulse);  // CAMBIAR POR LO QUE DIJO EL PROFE
     }
 
     public void SaltarJgdr()
     {
+        float y = Input.GetAxis("Vertical");
+        float salto = y * AlturaSalto;
+
         if (Input.GetKeyDown(KeyCode.W))
         {
-            rb.velocity = new Vector2(rb.velocity.x, AlturaSalto); // MECANICA DE SALTO, ARREGLAR LO DE QUE SALTA EN EL AIRE
+            //rb.velocity = new Vector2(rb.velocity.x, AlturaSalto); // MECANICA DE SALTO, ARREGLAR LO DE QUE SALTA EN EL AIRE
 
+            rb.AddRelativeForce(Vector2.up * y);
             EnElAire = true;
         }
     }
