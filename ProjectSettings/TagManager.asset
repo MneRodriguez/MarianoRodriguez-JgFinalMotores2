@@ -33,6 +33,7 @@ TagManager:
   - LuzRojoVerdePrta2
   - LuzRojoVerdePrta3
   - CuboLlavePltfmNvl3
+  - CuboLlavePrta2Nvl3
   layers:
   - Default
   - TransparentFX
