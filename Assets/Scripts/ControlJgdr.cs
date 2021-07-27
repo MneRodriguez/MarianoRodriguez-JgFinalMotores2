@@ -19,7 +19,7 @@ public class ControlJgdr : MonoBehaviour
 
     public float VelMax = 1.4f;
     public float gravedad = 6f;
-    public float AlturaSalto = 1.9f;
+    public float AlturaSalto = 2.9f;
     public float direccionMovto = 0;
         
     public Rigidbody rb;
@@ -88,9 +88,9 @@ public class ControlJgdr : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.W))
         {
-            //rb.velocity = new Vector2(rb.velocity.x, AlturaSalto); // MECANICA DE SALTO, ARREGLAR LO DE QUE SALTA EN EL AIRE
-
-            rb.AddRelativeForce(Vector2.up * y);
+            rb.velocity = new Vector2(rb.velocity.x * Time.deltaTime, AlturaSalto); // MECANICA DE SALTO, QUISE USAR ADDFORCE PERO ME FALTO ENCONTRARLE LA VUELTA
+                        
+            //rb.AddRelativeForce(Vector2.up * salto);
             EnElAire = true;
         }
     }

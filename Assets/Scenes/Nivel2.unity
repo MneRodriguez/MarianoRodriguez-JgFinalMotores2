@@ -4712,7 +4712,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1905435223}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1475, y: -2.542, z: 0}
+  m_LocalPosition: {x: 0.045, y: -0.0476, z: 0}
   m_LocalScale: {x: 0.037634265, y: 0.037634265, z: 0.037634265}
   m_Children:
   - {fileID: 804046198}
@@ -4734,7 +4734,7 @@ MonoBehaviour:
   cam: {fileID: 1978706510}
   VelMax: 1.4
   gravedad: 1
-  AlturaSalto: 1.9
+  AlturaSalto: 2.9
   direccionMovto: 0
   rb: {fileID: 1905435229}
   mainCollider: {fileID: 1905435224}
@@ -4754,7 +4754,7 @@ Rigidbody:
   m_GameObject: {fileID: 1905435223}
   serializedVersion: 2
   m_Mass: 2.5
-  m_Drag: 20
+  m_Drag: 2
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
