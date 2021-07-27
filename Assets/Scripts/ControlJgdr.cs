@@ -167,6 +167,11 @@ public class ControlJgdr : MonoBehaviour
             SceneManager.LoadScene("MenuDerrtNvl2");
         }
 
+        if (other.gameObject.CompareTag("ObstclNvl3"))
+        {
+            SceneManager.LoadScene("MenuDerrtNvl3");
+        }
+
         if (other.gameObject.CompareTag("ZonaWinNvl1"))
         {
             SceneManager.LoadScene("MenuVictoriaNvl1");
@@ -177,6 +182,10 @@ public class ControlJgdr : MonoBehaviour
             SceneManager.LoadScene("MenuVictoriaNvl2");
         }
 
+        if (other.gameObject.CompareTag("ZonaWinNvl3"))
+        {
+            SceneManager.LoadScene("MenuVictoriaNvl3");
+        }
 
     }
 
