@@ -25,12 +25,14 @@ TagManager:
   - BalaJgdr
   - MuroDestrct
   - ConsejoPrenderLuz
-  - CuboLlavePrta1Nvl3
   - ZonaWinNvl3
   - Prta1Nvl3
   - Prta3Nvl3
   - Prta2Nvl3
   - ObstclNvl3
+  - LuzRojoVerdePrta2
+  - LuzRojoVerdePrta3
+  - CuboLlavePltfmNvl3
   layers:
   - Default
   - TransparentFX
