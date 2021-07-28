@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class IAenemigos : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player")) // SI LOS ENEMS SON TOCADOS POR EL PLAYER, SE DESTRUYEN Y LE SUMAN PUNTOS
+        {
+            //ContadorDeScore.score += 2; FALTA HACERLO
+            Destroy(gameObject);
+        }
     }
 }
