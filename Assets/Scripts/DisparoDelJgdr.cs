@@ -39,11 +39,12 @@ public class DisparoDelJgdr : MonoBehaviour
         Destroy(balaJgdr, duracionBala);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    /*private void OnCollisionEnter(Collision collision)        // CON ESTO QUERIA HACER QUE LA BALA SE BORRE AL HACER CONTACTO, 
+                                                                    PERO LUEGO RECORDE QUE LA LINEA DE ARRIBA ES LA QUE SETEA EL TIEMPO EN EL QUE DESAPARECE
     {
         if (collision.gameObject.CompareTag("MuroDestrct"))
         {
             Destroy(gameObject);
         }
-    }
+    }*/
 }
