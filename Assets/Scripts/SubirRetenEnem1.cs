@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BorrarRetenEnem1 : MonoBehaviour
+public class SubirRetenEnem1 : MonoBehaviour
 {
     public Animator CuboReten1;
     void Start()
