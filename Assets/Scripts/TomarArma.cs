@@ -33,6 +33,11 @@ public class TomarArma : MonoBehaviour
         {
             //puedeAgarrarArma = true;
             ArmaQueSeRecoge = other.gameObject;
+
+            ArmaQueSeRecoge.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+
+
+
         }
     }
 }
