@@ -5217,6 +5217,7 @@ GameObject:
   - component: {fileID: 1400153771}
   - component: {fileID: 1400153770}
   - component: {fileID: 1400153769}
+  - component: {fileID: 1400153774}
   m_Layer: 0
   m_Name: CuboLlavePrta2Nvl3
   m_TagString: CuboLlavePrta2Nvl3
@@ -5314,6 +5315,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!122 &1400153774
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400153768}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4291020585
+  m_Size: 0.09
 --- !u!1 &1427323442
 GameObject:
   m_ObjectHideFlags: 0
@@ -5761,6 +5774,7 @@ GameObject:
   - component: {fileID: 1472767117}
   - component: {fileID: 1472767116}
   - component: {fileID: 1472767119}
+  - component: {fileID: 1472767120}
   m_Layer: 0
   m_Name: CuboLlavePltfmNvl3
   m_TagString: CuboLlavePltfmNvl3
@@ -5858,6 +5872,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!122 &1472767120
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472767114}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294045015
+  m_Size: 0.08
 --- !u!1 &1486617506
 GameObject:
   m_ObjectHideFlags: 0
