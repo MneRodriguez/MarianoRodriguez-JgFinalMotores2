@@ -25,6 +25,16 @@ public class TomarArma : MonoBehaviour
             ArmaQueSeRecoge.transform.position = ZonaAgarreDeArmaEnPlayer.transform.position; // ESTE SERIA EL PRIMER EMPTY CHILD DEL PLAYER
             ArmaQueSeRecoge.transform.parent = ZonaAgarreDeArmaEnPlayer.transform; // CONVIERTE A LA PISTOLA EN CHILD DE LA ZONA DE AGARRE DEL PLAYER
         }
+
+        
+    }
+
+    private void FixedUpdate()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            ArmaQueSeRecoge.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+        }
     }
 
     private void OnTriggerEnter(Collider other) // ESTE METODO TAMBIEN LO HICE EN EL OTRO SCRIPT "ControlJgdr" PQ QUERIA INTENTAR DE NUEVO ESO DE LLAMAR A UNA FUNCION DE UN SCRIPT DESDE OTRO SCRIPT
@@ -35,8 +45,6 @@ public class TomarArma : MonoBehaviour
             ArmaQueSeRecoge = other.gameObject;
 
             ArmaQueSeRecoge.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
-
-
 
         }
     }

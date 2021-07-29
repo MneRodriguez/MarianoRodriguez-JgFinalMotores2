@@ -34,7 +34,7 @@ public class IAenemigos : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("BalaJgdr")) // SI LOS ENEMS SON TOCADOS POR LAS BALAS DEL PLAYER, SE DESTRUYEN Y LE SUMAN PUNTOS
         {
-            //ContadorDeScore.score += 2; FALTA HACERLO
+            ContadorDeScore.valorScore += 2;
             Destroy(gameObject);
         }
     }
