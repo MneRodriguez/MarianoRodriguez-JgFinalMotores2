@@ -10,6 +10,7 @@ public class ContadorDeScore : MonoBehaviour
     void Start()
     {
         score = GetComponent<Text>();
+
     }
 
     

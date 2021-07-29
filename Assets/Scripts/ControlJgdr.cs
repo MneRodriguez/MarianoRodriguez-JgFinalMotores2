@@ -28,7 +28,7 @@ public class ControlJgdr : MonoBehaviour
     public bool TocandoPiso = false;
     public bool EnElAire = false;
 
-
+    //public GameObject CapsulaPowerUp;
     public Light LuzNvl2_1, LuzNvl2_2, LuzNvl2_3;
     public TextMesh textoConsejoPrenderLuz;
     public Animator AnimPistolaRotando; // CON ESTA ANIM HAGO LO OPUESTO QUE CON LAS PUERTAS; ACA, SI HAY UN TRIGGER, LA DETENGO
@@ -40,6 +40,7 @@ public class ControlJgdr : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         mainCollider = GetComponent<BoxCollider>();
         textoConsejoPrenderLuz = GameObject.FindWithTag("ConsejoPrenderLuz").GetComponent<TextMesh>();
+        //CapsulaPowerUp = GetComponent<GameObject>();
 
         AnimPistolaRotando.enabled = true;
 
