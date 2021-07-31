@@ -23,7 +23,6 @@ TagManager:
   - ZonaAbrirPrtaJaulaCuboLlave
   - Pistola
   - BalaJgdr
-  - MuroDestrct
   - ConsejoPrenderLuz
   - ZonaWinNvl3
   - Prta1Nvl3
@@ -34,6 +33,9 @@ TagManager:
   - LuzRojoVerdePrta3
   - CuboLlavePltfmNvl3
   - CuboLlavePrta2Nvl3
+  - MuroDestrct1
+  - MuroDestrct2
+  - MuroDestrct3
   layers:
   - Default
   - TransparentFX

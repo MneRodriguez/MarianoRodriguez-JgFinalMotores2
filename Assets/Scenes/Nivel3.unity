@@ -1056,8 +1056,8 @@ Transform:
   m_LocalPosition: {x: 2.4173393, y: -1.9964443, z: -0.934188}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1442270201}
   - {fileID: 1123217243}
+  - {fileID: 1442270201}
   - {fileID: 1427323443}
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -4692,8 +4692,8 @@ GameObject:
   - component: {fileID: 1123217245}
   - component: {fileID: 1123217244}
   m_Layer: 0
-  m_Name: Muro1 (1)
-  m_TagString: MuroDestrct
+  m_Name: Muro1
+  m_TagString: MuroDestrct1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4706,11 +4706,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1123217242}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.608, y: 0.316, z: 0.9312146}
-  m_LocalScale: {x: 0.04889, y: 0.6846913, z: 0.04889}
+  m_LocalPosition: {x: 0.608, y: 0.309, z: 0.9312146}
+  m_LocalScale: {x: 0.04889, y: 0.56758857, z: 0.04889}
   m_Children: []
   m_Father: {fileID: 164306948}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1123217244
 Rigidbody:
@@ -4726,7 +4726,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &1123217245
 MonoBehaviour:
@@ -4750,7 +4750,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1123217242}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -5976,8 +5976,8 @@ GameObject:
   - component: {fileID: 1427323445}
   - component: {fileID: 1427323444}
   m_Layer: 0
-  m_Name: Muro1 (2)
-  m_TagString: MuroDestrct
+  m_Name: Muro3
+  m_TagString: MuroDestrct3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6010,7 +6010,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &1427323445
 MonoBehaviour:
@@ -6034,7 +6034,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1427323442}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -6101,8 +6101,8 @@ GameObject:
   - component: {fileID: 1442270203}
   - component: {fileID: 1442270202}
   m_Layer: 0
-  m_Name: Muro1
-  m_TagString: MuroDestrct
+  m_Name: Muro2
+  m_TagString: MuroDestrct2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6115,11 +6115,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1442270200}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.875, y: 0.316, z: 0.9312146}
-  m_LocalScale: {x: 0.04889, y: 0.6846913, z: 0.04889}
+  m_LocalPosition: {x: 0.875, y: 0.30900005, z: 0.9312146}
+  m_LocalScale: {x: 0.04889, y: 0.56758857, z: 0.04889}
   m_Children: []
   m_Father: {fileID: 164306948}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1442270202
 Rigidbody:
@@ -6135,7 +6135,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &1442270203
 MonoBehaviour:
@@ -6159,7 +6159,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1442270200}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -6950,6 +6950,9 @@ MonoBehaviour:
   VelDesplzBalaJgdr: 10
   duracionBala: 0.9
   habilitarDisparo: 0
+  MuroParaDestruir1: {fileID: 0}
+  MuroParaDestruir2: {fileID: 0}
+  MuroParaDestruir3: {fileID: 0}
 --- !u!114 &1572555631
 MonoBehaviour:
   m_ObjectHideFlags: 0

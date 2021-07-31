@@ -11,9 +11,17 @@ public class DisparoDelJgdr : MonoBehaviour
     public float duracionBala = 0.9f;
 
     public bool habilitarDisparo = false;
+
+    public GameObject MuroParaDestruir1, MuroParaDestruir2, MuroParaDestruir3;
     void Start()
     {
-        
+        GameObject MuroAdestruir1 = GameObject.FindWithTag("MuroDestrct1");
+        GameObject MuroAdestruir2 = GameObject.FindWithTag("MuroDestrct2");
+        GameObject MuroAdestruir3 = GameObject.FindWithTag("MuroDestrct3");
+
+        MuroParaDestruir1 = MuroAdestruir1;
+        MuroParaDestruir2 = MuroAdestruir2;
+        MuroParaDestruir3 = MuroAdestruir3;
     }
 
     
@@ -39,12 +47,22 @@ public class DisparoDelJgdr : MonoBehaviour
         Destroy(balaJgdr, duracionBala);
     }
 
-    /*private void OnCollisionEnter(Collision collision)        // CON ESTO QUERIA HACER QUE LA BALA SE BORRE AL HACER CONTACTO, 
-                                                                    PERO LUEGO RECORDE QUE LA LINEA DE ARRIBA ES LA QUE SETEA EL TIEMPO EN EL QUE DESAPARECE
+    private void OnCollisionEnter(Collision collision)        // CON ESTO QUERIA HACER QUE LA BALA SE BORRE AL HACER CONTACTO, 
+                                                                // PERO LUEGO RECORDE QUE LA LINEA DE ARRIBA ES LA QUE SETEA EL TIEMPO EN EL QUE DESAPARECE
     {
-        if (collision.gameObject.CompareTag("MuroDestrct"))
+        if (collision.gameObject.CompareTag("MuroDestrct1"))
         {
-            Destroy(gameObject);
+            Destroy(MuroParaDestruir1);
         }
-    }*/
+
+        if (collision.gameObject.CompareTag("MuroDestrct2"))
+        {
+            Destroy(MuroParaDestruir2);
+        }
+
+        if (collision.gameObject.CompareTag("MuroDestrct3"))
+        {
+            Destroy(MuroParaDestruir3);
+        }
+    }
 }
