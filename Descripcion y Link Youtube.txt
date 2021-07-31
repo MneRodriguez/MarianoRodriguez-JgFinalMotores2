@@ -1,0 +1,25 @@
+
+ << UAI 2021 - Motores Gráficos II >>
+
+         -- TRABAJO FINAL --
+
+   Profesor: Gregorio D'angelo
+   Alumno: Mariano Nicolás Ezequiel Rodríguez
+   Carrera: Lic. desarrollo videojuegos & simuladores
+
+	  {{ Descripción }}
+
+  Este trabajo consta de un videojuego
+  del género plataformas, combinado con
+  mecánicas de puzzles y disparos.
+
+  El jugador debe avanzar por 3 niveles
+  en los cuales se ha intentado aplicar 
+  una curva de dificultad progresiva,
+  añadiendo desafíos, elementos y enemigos 
+  en cada nueva instancia.
+
+  LINK A LA DEMOSTRACIÓN EN VIDEO:
+
+  
+  
