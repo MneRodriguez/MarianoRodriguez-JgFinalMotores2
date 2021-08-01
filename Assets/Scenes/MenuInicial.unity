@@ -320,7 +320,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "- UAI, 11 de agosto 2021 - \n\n<< Motores Gr\xE1ficos II, TP FINAL >>\n\nControles:
+  m_Text: "- UAI, 02 de agosto 2021 - \n\n<< Motores Gr\xE1ficos II, TP FINAL >>\n\nControles:
     WASD    Disparo: Mouse"
 --- !u!222 &506097206
 CanvasRenderer:
