@@ -70,8 +70,14 @@ public class ControlJgdr : MonoBehaviour
     void Update()
     {
         MoverJgdr();
-        SaltarJgdr();              
-                
+        SaltarJgdr();
+
+        if (tomarScriptDeAgarrarArma.puedeAgarrarArma && Input.GetKeyDown(KeyCode.LeftShift)) // CON ESTO INTENTO QUE EL PLAYER PUEDA CAMBIAR LA ORIENTACION DEL ARMA, PARA APUNTAR A OTRO LADO
+        {
+            tomarScriptDeAgarrarArma.ArmaQueSeRecoge.transform.position = new Vector3(-2, 0, 0);
+            tomarScriptDeAgarrarArma.ArmaQueSeRecoge.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+        }
+
     }
 
     public void MoverJgdr()
@@ -85,15 +91,21 @@ public class ControlJgdr : MonoBehaviour
     public void SaltarJgdr()
     {
         float y = Input.GetAxis("Vertical");
-        float salto = y * AlturaSalto;
+        //float salto = y * AlturaSalto;
 
-        if (Input.GetKeyDown(KeyCode.W))
         {
-            rb.velocity = new Vector2(rb.velocity.x * Time.deltaTime, AlturaSalto); // MECANICA DE SALTO, QUISE USAR ADDFORCE PERO ME FALTO ENCONTRARLE LA VUELTA
-                        
-            //rb.AddRelativeForce(Vector2.up * salto);
-            EnElAire = true;
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                rb.velocity = new Vector2(rb.velocity.x * Time.deltaTime, AlturaSalto); // MECANICA DE SALTO, QUISE USAR ADDFORCE PERO ME FALTO ENCONTRARLE LA VUELTA
+
+                //rb.AddRelativeForce(Vector2.up * salto);
+
+                EnElAire = true;
+                TocandoPiso = false;
+            }
         }
+     
+       
     }
     void FixedUpdate()
     {
@@ -102,6 +114,11 @@ public class ControlJgdr : MonoBehaviour
         TocandoPiso = false;
         EnElAire = true;
 
+        if (EnElAire)
+        {
+
+        }
+
     }
 
     void OnCollisionStay()
@@ -109,6 +126,7 @@ public class ControlJgdr : MonoBehaviour
         TocandoPiso = true;
         EnElAire = false;
     }
+
 
     public void OnTriggerEnter(Collider other)
     {
@@ -120,7 +138,9 @@ public class ControlJgdr : MonoBehaviour
             // DETENGO LA ANIM DE PISTOLA GIRANDO SOBRE SU EJE  >>OJO, LA PISTOLA SE DETIENE EN LA POS DE ROTACION DONDE ESTÉ CUANDO LA AGARRE, PONERLA EN 180 MIENTRAS JUEGO LUEGO DE AGARRARLA<<
             AnimPistolaRotando.enabled = false;
 
-            // HABILITA MOVTO EN 8 DIRECCS CON EL MOUSE AL AGARRAR LA PISTOLA    >>TODAVIA NO FUNCA COMO QUISIERA<<
+           
+            
+            // HABILITA MOVTO EN 8 DIRECCS CON EL MOUSE AL AGARRAR LA PISTOLA    >> TODAVIA NO FUNCA COMO QUISIERA <<
 
             /*direccionDeMira = Camera.main.ScreenToWorldPoint(Input.mousePosition) - tomarScriptDeAgarrarArma.ArmaQueSeRecoge.transform.position; // ESTE ES EL POSITION DEL PLAYER CREO
             direccionDeMira.Normalize();

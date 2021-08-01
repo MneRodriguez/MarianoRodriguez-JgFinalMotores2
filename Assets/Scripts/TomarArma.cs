@@ -31,10 +31,10 @@ public class TomarArma : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        /*if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             ArmaQueSeRecoge.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-        }
+        }*/
     }
 
     private void OnTriggerEnter(Collider other) // ESTE METODO TAMBIEN LO HICE EN EL OTRO SCRIPT "ControlJgdr" PQ QUERIA INTENTAR DE NUEVO ESO DE LLAMAR A UNA FUNCION DE UN SCRIPT DESDE OTRO SCRIPT

@@ -5,9 +5,11 @@ using UnityEngine;
 public class AbrePrta1Nvl3 : MonoBehaviour
 {
     public Animator AbrirPrta1Nvl3;
+    public Animator Enem2;
     void Start()
     {
         AbrirPrta1Nvl3.enabled = false;
+        Enem2.enabled = false;
     }
 
     
@@ -21,6 +23,7 @@ public class AbrePrta1Nvl3 : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             AbrirPrta1Nvl3.enabled = true;
+            Enem2.enabled = true;
         }
     }
 }
