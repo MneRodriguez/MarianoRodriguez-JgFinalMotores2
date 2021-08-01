@@ -30,9 +30,9 @@ public class IAenemigos : MonoBehaviour
         navMeshAgent.destination = target.position;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other) // SI LOS ENEMS SON TOCADOS POR LAS BALAS DEL PLAYER, SE DESTRUYEN Y LE SUMAN PUNTOS
     {
-        if (collision.gameObject.CompareTag("BalaJgdr")) // SI LOS ENEMS SON TOCADOS POR LAS BALAS DEL PLAYER, SE DESTRUYEN Y LE SUMAN PUNTOS
+        if (other.gameObject.CompareTag("BalaJgdr"))
         {
             ContadorDeScore.valorScore += 2;
             Destroy(gameObject);

@@ -2270,6 +2270,7 @@ GameObject:
   - component: {fileID: 510972934}
   - component: {fileID: 510972939}
   - component: {fileID: 510972937}
+  - component: {fileID: 510972938}
   m_Layer: 0
   m_Name: Enem4
   m_TagString: ObstclNvl3
@@ -2370,6 +2371,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &510972938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510972932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adaf1cf12c08594ba20541a750bb7dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enem: {fileID: 510972932}
+  rbEnem: {fileID: 510972939}
+  navMeshAgent: {fileID: 0}
+  target: {fileID: 0}
 --- !u!54 &510972939
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2492,6 +2509,7 @@ GameObject:
   - component: {fileID: 532011200}
   - component: {fileID: 532011205}
   - component: {fileID: 532011203}
+  - component: {fileID: 532011204}
   m_Layer: 0
   m_Name: Enem2
   m_TagString: ObstclNvl3
@@ -2592,6 +2610,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &532011204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532011198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adaf1cf12c08594ba20541a750bb7dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enem: {fileID: 532011198}
+  rbEnem: {fileID: 532011205}
+  navMeshAgent: {fileID: 0}
+  target: {fileID: 0}
 --- !u!54 &532011205
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3906,6 +3940,7 @@ GameObject:
   - component: {fileID: 1022628078}
   - component: {fileID: 1022628083}
   - component: {fileID: 1022628084}
+  - component: {fileID: 1022628081}
   m_Layer: 0
   m_Name: Enem1
   m_TagString: ObstclNvl3
@@ -3987,6 +4022,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1022628076}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1022628081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022628076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adaf1cf12c08594ba20541a750bb7dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enem: {fileID: 1022628076}
+  rbEnem: {fileID: 1022628083}
+  navMeshAgent: {fileID: 0}
+  target: {fileID: 0}
 --- !u!54 &1022628083
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5748,7 +5799,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1427323442}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.859, y: 0.145, z: 0.9312146}
+  m_LocalPosition: {x: 1.924, y: 0.145, z: 0.9312146}
   m_LocalScale: {x: 0.04889, y: 0.28171623, z: 0.04889}
   m_Children: []
   m_Father: {fileID: 164306948}
@@ -6182,7 +6233,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1472767114}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.3423, y: -1.8987036, z: 0}
+  m_LocalPosition: {x: 4.4072995, y: -1.8987036, z: 0}
   m_LocalScale: {x: 0.038755234, y: 0.14107224, z: 0.049064744}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6682,7 +6733,6 @@ GameObject:
   - component: {fileID: 1572555632}
   - component: {fileID: 1572555631}
   - component: {fileID: 1572555630}
-  - component: {fileID: 1572555638}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -6740,7 +6790,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 117846401}
   VelMax: 1.4
-  gravedad: 4
+  gravedad: 1
   AlturaSalto: 2.9
   direccionMovto: 0
   rb: {fileID: 1572555633}
@@ -6836,26 +6886,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1572555629}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.21, y: -6.5482, z: 0}
+  m_LocalPosition: {x: 0.056, y: -1.9506, z: 0}
   m_LocalScale: {x: 0.037634265, y: 0.037634265, z: 0.037634265}
   m_Children:
   - {fileID: 1745334440}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1572555638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1572555629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f388a38d00cf0a449dca4475c537369, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: {fileID: 0}
 --- !u!1 &1592562546
 GameObject:
   m_ObjectHideFlags: 0
@@ -8195,6 +8232,7 @@ GameObject:
   - component: {fileID: 2115436027}
   - component: {fileID: 2115436032}
   - component: {fileID: 2115436030}
+  - component: {fileID: 2115436031}
   m_Layer: 0
   m_Name: Enem3
   m_TagString: ObstclNvl3
@@ -8295,6 +8333,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2115436031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115436025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adaf1cf12c08594ba20541a750bb7dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enem: {fileID: 2115436025}
+  rbEnem: {fileID: 2115436032}
+  navMeshAgent: {fileID: 0}
+  target: {fileID: 0}
 --- !u!54 &2115436032
 Rigidbody:
   m_ObjectHideFlags: 0

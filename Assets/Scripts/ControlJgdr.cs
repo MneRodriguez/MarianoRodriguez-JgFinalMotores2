@@ -48,8 +48,9 @@ public class ControlJgdr : MonoBehaviour
         rb.collisionDetectionMode = CollisionDetectionMode.Continuous;        
         //rb.constraints = RigidbodyConstraints.FreezePositionZ;
 
-        rb.centerOfMass = Vector3.zero;
+        rb.centerOfMass = Vector3.zero; // CON ESTAS 2 LINEAS QUISE PROBAR A OPTIMIZAR LA FISICA DEL PLAYER
         rb.inertiaTensorRotation = Quaternion.identity;
+
         //rb.constraints = RigidbodyConstraints.FreezeRotationX;  // AL FINAL ESTOS 3 COMANDOS IMPEDIAN QUE LAS CASILLAS QUEDARAN TILDADAS
         //rb.constraints = RigidbodyConstraints.FreezeRotationY;
         //rb.constraints = RigidbodyConstraints.FreezeRotationZ;
