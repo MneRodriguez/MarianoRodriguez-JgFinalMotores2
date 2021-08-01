@@ -5,10 +5,14 @@ using UnityEngine;
 public class SubirRetenEnem2 : MonoBehaviour
 {
     public Animator CuboReten2, CuboReten3;
+    public Animator Enem3, Enem4;
     void Start()
     {
         CuboReten2.enabled = false;
         CuboReten3.enabled = false;
+
+        Enem3.enabled = false;
+        Enem4.enabled = false;
     }
 
     
@@ -23,6 +27,9 @@ public class SubirRetenEnem2 : MonoBehaviour
         {
             CuboReten2.enabled = true;
             CuboReten3.enabled = true;
+
+            Enem3.enabled = true;
+            Enem4.enabled = true;
         }
     }
 }
